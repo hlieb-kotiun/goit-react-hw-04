@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+
+  justify-content: center;
+  background-color: rgb(87, 87, 244);
+  padding: 16px 0;
+}
+
+.form {
+  display: flex;
+  margin: 0;
+}
+.wrapper {
+  position: relative;
+}
+
+.input {
+  width: 300px;
+  padding: 6px 12px;
+  padding-left: 40px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
