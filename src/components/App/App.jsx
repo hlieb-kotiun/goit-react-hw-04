@@ -3,10 +3,16 @@ import SearchBar from "../SearchBar/SearchBar";
 import axios from "axios";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
-// import { TailSpin } from "react-loader-spinner";
+import ClipLoader from "react-spinners/ClipLoader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import s from "./App.module.css";
 import ImageModal from "../ImageModal/ImageModal";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
 
 function App() {
   const KEY = "W4xQh8Ib6Ep7JQzOIs7raJW1EJLkqDfOm5oS3SvTF-g";
@@ -14,6 +20,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const [loader, setLoader] = useState(false);
+  let [color, setColor] = useState("#000");
   const [error, setError] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -75,20 +82,18 @@ function App() {
   return (
     <>
       <SearchBar onSubmit={onSubmit} />
-      {/* {loader && (
+      {loader && (
         <div className={s.wrapper}>
-          <TailSpin
-            visible={true}
-            height="50"
-            width="50"
-            color="#000"
-            ariaLabel="tail-spin-loading"
-            radius="1"
-            wrapperStyle={{}}
-            wrapperClass=""
+          <ClipLoader
+            color={color}
+            loading={loader}
+            cssOverride={override}
+            size={150}
+            aria-label="Loading Spinner"
+            data-testid="loader"
           />
         </div>
-      )} */}
+      )}
       <ImageGallery images={images} onImageClick={openModal} />
       {images.length > 0 && <LoadMoreBtn handleClick={handleClick} />}
       {error && <ErrorMessage />}
