@@ -1,12 +1,22 @@
-# React + Vite
+# 🖼️ Image Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application that allows users to search for high-quality images using the [Unsplash API](https://unsplash.com/developers). Users can enter a search keyword and browse through paginated image results, view them in a gallery format, and open them in a fullscreen modal for more details.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔎 **Image Search** – Search images by keyword from Unsplash.
+- 📷 **Image Gallery** – Responsive grid layout for displaying image results.
+- 🔄 **Load More Button** – Load additional results without losing previous ones.
+- 💡 **Image Modal** – View full-size images in a modal with additional details.
+- 🧑‍🎨 **Author Info** – Modal includes photographer's name, likes, and description.
+- ⚠️ **Error Handling** – Graceful UI for network or input errors.
+- ⏳ **Loading Indicator** – Shows a spinner while images are loading.
+- ✨ **Toast Notifications** – Helpful messages for user interactions.
 
-## Expanding the ESLint configuration
+## 🧩 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React**
+- **React Hot Toast** – For user notifications
+- **React Modal** – For modal window functionality
+- **React Spinners** – For loading indicators
+- **Unsplash API** – For image data
