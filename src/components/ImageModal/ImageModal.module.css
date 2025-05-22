@@ -1,0 +1,17 @@
+.img {
+  max-height: 600px;
+}
+
+.info {
+  background-color: beige;
+  display: flex;
+  padding-left: 40px;
+  gap: 25px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.txt {
+  font-size: larger;
+  font-style: oblique;
+}
